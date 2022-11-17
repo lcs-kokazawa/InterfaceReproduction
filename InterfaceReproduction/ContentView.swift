@@ -9,26 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            
-            //First layer (background)
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack{
+        NavigationView {
+            ZStack {
+                //First layer (background)
+                Color.black
+                    .ignoresSafeArea()
                 
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
+                //Second layer
+                VStack{
+                    
+                    
+                }
+                .padding()
             }
-            .padding()
+            .navigationTitle("Workouts")    
         }
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
